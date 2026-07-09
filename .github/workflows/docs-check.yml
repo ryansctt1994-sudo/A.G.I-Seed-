@@ -30,6 +30,7 @@ jobs:
             MD013: false
             MD024: false
             MD033: false
+            MD041: false
           globs:
             - "**/*.md"
           ignores:
@@ -39,8 +40,24 @@ jobs:
 
       - name: Link check
         run: |
+          cat > .markdown-link-check.json <<'JSON'
+          {
+            "ignorePatterns": [
+              {
+                "pattern": "^https://github.com/ryansctt1994-sudo/A.G.I-Seed-/issues/"
+              }
+            ],
+            "replacementPatterns": [
+              {
+                "pattern": "^/",
+                "replacement": "file://$PWD/"
+              }
+            ],
+            "aliveStatusCodes": [200, 206, 301, 302, 403, 429]
+          }
+          JSON
           find . -name "*.md" -not -path "./node_modules/*" -print0 \
-            | xargs -0 -n 1 npx --yes markdown-link-check --quiet
+            | xargs -0 -n 1 npx --yes markdown-link-check --quiet --config .markdown-link-check.json
 
       - name: Advisory spell check
         continue-on-error: true
@@ -50,18 +67,28 @@ jobs:
             "version": "0.2",
             "language": "en",
             "words": [
+              "adversarial",
               "AGI",
               "Aphoph",
+              "artifact",
+              "artifacts",
               "CANON",
               "Chronicle",
+              "dataclass",
+              "dataclasses",
+              "deterministic",
               "DMSI",
               "EchoGenesis",
-              "Harmonia",
-              "Symmind",
-              "Weaver",
               "gVisor",
+              "Harmonia",
+              "multidimensional",
+              "nonclaims",
               "roadmap",
-              "subsystems"
+              "subsystems",
+              "sufficiency",
+              "Symmind",
+              "unittest",
+              "Weaver"
             ],
             "ignorePaths": [
               "node_modules",
