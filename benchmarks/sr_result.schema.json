@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ryansctt1994-sudo/A.G.I-Seed-/benchmarks/sr_result.schema.json",
+  "title": "AGI Seed SR Benchmark Result",
+  "type": "object",
+  "required": [
+    "benchmark_version",
+    "task_id",
+    "evidence_capacity",
+    "governance_demand",
+    "sufficiency_ratio",
+    "admissible",
+    "verdict",
+    "reason_code",
+    "safe_message",
+    "evidence_level",
+    "non_claims"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "benchmark_version": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_capacity": {
+      "type": "number",
+      "minimum": 0
+    },
+    "governance_demand": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "sufficiency_ratio": {
+      "type": "number",
+      "minimum": 0
+    },
+    "admissible": {
+      "type": "boolean"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["sufficient", "insufficient"]
+    },
+    "reason_code": {
+      "type": "string",
+      "enum": ["sr_sufficient", "sr_insufficient"]
+    },
+    "safe_message": {
+      "type": "string"
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": ["E0", "E1", "E2", "E3", "E4", "E5"]
+    },
+    "non_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
