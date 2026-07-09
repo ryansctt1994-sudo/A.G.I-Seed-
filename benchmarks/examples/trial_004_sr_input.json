@@ -1,0 +1,56 @@
+{
+  "task_id": "trial_004",
+  "evidence_level": "E2",
+  "capacity_dimensions": [
+    {
+      "name": "domain_expertise",
+      "score": 4,
+      "weight": 2,
+      "rationale": "The target task is a simple sorting function with known expected behavior."
+    },
+    {
+      "name": "test_coverage",
+      "score": 3,
+      "weight": 1,
+      "rationale": "The initial test suite covers syntax, contract, runtime behavior, and CLI return codes."
+    },
+    {
+      "name": "replay_support",
+      "score": 3,
+      "weight": 1,
+      "rationale": "Replay design exists, but the replay capsule is not yet independently reproduced."
+    },
+    {
+      "name": "historical_calibration",
+      "score": 1,
+      "weight": 1,
+      "rationale": "The benchmark has not yet accumulated calibration data across trials."
+    }
+  ],
+  "demand_dimensions": [
+    {
+      "name": "semantic_difficulty",
+      "score": 2,
+      "weight": 2,
+      "rationale": "The task semantics are narrow and well defined."
+    },
+    {
+      "name": "security_sensitivity",
+      "score": 3,
+      "weight": 1,
+      "rationale": "The task involves generated code, so sandboxing and preflight checks matter."
+    },
+    {
+      "name": "reproducibility_burden",
+      "score": 3,
+      "weight": 1,
+      "rationale": "Local reproduction is feasible, but witness reproduction is not complete."
+    },
+    {
+      "name": "authority_impact",
+      "score": 2,
+      "weight": 1,
+      "rationale": "The patch is limited to an ephemeral workspace and cannot modify the base repo."
+    }
+  ]
+}
