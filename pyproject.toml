@@ -1,0 +1,39 @@
+[project]
+name = "agi-seed"
+version = "0.0.0"
+description = "Research prototype for governed agentic software modification."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "See LICENSE" }
+authors = [
+  { name = "AGI Seed contributors" }
+]
+keywords = [
+  "ai-governance",
+  "agentic-safety",
+  "reproducible-research",
+  "sufficiency",
+  "receipts"
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/ryansctt1994-sudo/A.G.I-Seed-"
+Documentation = "https://github.com/ryansctt1994-sudo/A.G.I-Seed-/blob/main/docs/AGI_SEED_UNIFIED_MASTER_HANDOFF.md"
+Roadmap = "https://github.com/ryansctt1994-sudo/A.G.I-Seed-/blob/main/ROADMAP.md"
+
+[tool.unittest]
+start-directory = "tests"
+
+[tool.agi_seed]
+evidence_ceiling = "E2"
+production_ready = false
+external_validation = false
