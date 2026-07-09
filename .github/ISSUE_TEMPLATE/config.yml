@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the master handoff
+    url: https://github.com/ryansctt1994-sudo/A.G.I-Seed-/blob/main/docs/AGI_SEED_UNIFIED_MASTER_HANDOFF.md
+    about: Start here for the current constitutional baseline and evidence discipline.
+  - name: Read the roadmap
+    url: https://github.com/ryansctt1994-sudo/A.G.I-Seed-/blob/main/ROADMAP.md
+    about: Current milestone order and evidence status.
