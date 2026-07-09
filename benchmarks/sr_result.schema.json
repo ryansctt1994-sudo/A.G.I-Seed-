@@ -6,6 +6,7 @@
   "required": [
     "benchmark_version",
     "task_id",
+    "mode",
     "evidence_capacity",
     "governance_demand",
     "sufficiency_ratio",
@@ -14,6 +15,9 @@
     "reason_code",
     "safe_message",
     "evidence_level",
+    "capacity_dimensions",
+    "demand_dimensions",
+    "limiting_factors",
     "non_claims"
   ],
   "additionalProperties": false,
@@ -24,6 +28,10 @@
     "task_id": {
       "type": "string",
       "minLength": 1
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["scalar", "multidimensional"]
     },
     "evidence_capacity": {
       "type": "number",
@@ -55,10 +63,53 @@
       "type": "string",
       "enum": ["E0", "E1", "E2", "E3", "E4", "E5"]
     },
+    "capacity_dimensions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dimension"
+      }
+    },
+    "demand_dimensions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dimension"
+      }
+    },
+    "limiting_factors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "non_claims": {
       "type": "array",
       "items": {
         "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "dimension": {
+      "type": "object",
+      "required": ["name", "score", "weight", "rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rationale": {
+          "type": "string"
+        }
       }
     }
   }
