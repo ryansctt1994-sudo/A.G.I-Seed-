@@ -109,7 +109,9 @@ Correct current description:
 
 ## Repository Status
 
-This repository currently contains the constitutional handoff documentation. The implementation modules, tests, replay capsule, CI, and witness artifacts are next engineering milestones.
+The repository now contains an executable SR benchmark (`benchmarks/sr_benchmark.py`), its result schema, example inputs, Python tests, project metadata, and CI. The broader governed patch corridor, replay capsule, isolated execution path, and witness infrastructure remain incomplete.
+
+At the 2026-10-04 portfolio audit, Python Tests were green on the latest observed main commit, while the Docs Check was failing on markdown style rules. This PR repairs that documentation gate without promoting the evidence level.
 
 ## License
 
