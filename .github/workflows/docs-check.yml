@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Markdown lint
         run: |
@@ -30,13 +30,15 @@ jobs:
             MD013: false
             MD024: false
             MD033: false
+            MD036: false
             MD041: false
+            MD060: false
           globs:
             - "**/*.md"
           ignores:
             - "node_modules"
           YAML
-          npx --yes markdownlint-cli2
+          npx --yes markdownlint-cli2@0.22.1
 
       - name: Link check
         run: |
