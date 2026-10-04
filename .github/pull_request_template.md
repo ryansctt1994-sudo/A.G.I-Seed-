@@ -4,7 +4,7 @@ Describe the purpose of this pull request.
 
 ## Changes
 
-- 
+- Describe concrete changes here.
 
 ## Related issues
 
