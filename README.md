@@ -2,6 +2,9 @@
 
 ## AGI Seed Constitutional Research Portfolio
 
+> [!NOTE]
+> **Portfolio crosswalk — 2026-10-06:** The E0–E4 ladder below is repository-local/historical vocabulary. It does **not** override the portfolio evidence axes or promote this repository by label equivalence. Portfolio-wide state remains **E2 ceiling / W0 / O0 / production prohibited / E4 not earned**.
+
 **Status:** Research prototype • Constitutional baseline frozen • Engineering active • External validation pending
 
 AGI Seed is a research project for governed agentic software modification. It is designed around a strict separation between **reasoning** and **authority**: models may propose, but deterministic governance decides what can be executed, verified, replayed, witnessed, and promoted.
